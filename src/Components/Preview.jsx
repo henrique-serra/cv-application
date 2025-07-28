@@ -1,4 +1,4 @@
-export default function Preview() {
+export default function Preview({ personalInfo }) {
     return (
         <div className="preview-section">
             <div className="preview-card">
@@ -10,7 +10,7 @@ export default function Preview() {
               {/* CV Preview Content */}
               <div className="cv-preview">
                 <div className="cv-header">
-                  <h1 className="cv-name">João Silva</h1>
+                  <h1 className="cv-name">{personalInfo && personalInfo.name}</h1>
                   <div className="cv-contact">
                     <p>joao.silva@email.com</p>
                     <p>(11) 99999-9999</p>

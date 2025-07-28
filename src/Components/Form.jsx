@@ -1,4 +1,4 @@
-export default function Form() {
+export default function Form({ onChangeName }) {    
     return (
         <div className="form-section">
             <div className="card personal-card">
@@ -25,6 +25,7 @@ export default function Form() {
                     type="text" 
                     placeholder="João Silva"
                     className="form-input personal-input"
+                    onChange={onChangeName}
                   />
                 </div>
                 <div className="field-group">
