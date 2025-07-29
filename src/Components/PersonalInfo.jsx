@@ -81,11 +81,29 @@ export default function PersonalInfo() {
             {(statusPersonalInfo === 'submited') ? <Preview personalInfo={personalInfo} /> : 
                 <>
                 <div className="form-fields">
-                    <FieldGroup label='Nome Completo' type='text' placeholder='João Silva' value={personalInfo.name} onChange={(e) => handleInputChange(e, 'name')} />
-                    <FieldGroup label='Email' type='email' placeholder='joao.silva@email.com' value={personalInfo.email} onChange={(e) => handleInputChange(e, 'email')} />
-                    <FieldGroup label='Telefone' type='tel' placeholder='(11) 99999-9999' value={personalInfo.tel} onChange={(e) => handleInputChange(e, 'tel')} />
+                    <FieldGroup 
+                    label='Nome Completo' 
+                    type='text' 
+                    placeholder='João Silva' 
+                    value={personalInfo.name} 
+                    onChange={(e) => handleInputChange(e, 'name')} 
+                    />
+                    <FieldGroup 
+                    label='Email' 
+                    type='email' 
+                    placeholder='joao.silva@email.com' 
+                    value={personalInfo.email} 
+                    onChange={(e) => handleInputChange(e, 'email')} 
+                    />
+                    <FieldGroup 
+                    label='Telefone' 
+                    type='tel' 
+                    placeholder='(11) 99999-9999' 
+                    value={personalInfo.tel} 
+                    onChange={(e) => handleInputChange(e, 'tel')} 
+                    />
                 </div>
-                <button className="submit-btn personal-submit" onClick={handleSaveClick}>
+                <button className="submit-btn personal-submit" onClick={(e) => handleSaveClick(e)}>
                 Salvar Informações Pessoais
                 </button>
                 </>
