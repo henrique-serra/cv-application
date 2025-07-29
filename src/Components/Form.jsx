@@ -1,56 +1,11 @@
-export default function Form({ onChangeName }) {    
-    return (
-        <div className="form-section">
-            <div className="card personal-card">
-              <div className="card-header">
-                <h2 className="card-title">
-                  <div className="icon-wrapper personal-icon">
-                    <svg className="icon" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  Informações Pessoais
-                </h2>
-                <button className="edit-btn personal-edit">
-                  <svg className="icon-small" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                  </svg>
-                </button>
-              </div>
-              
-              <div className="form-fields">
-                <div className="field-group">
-                  <label className="field-label">Nome Completo</label>
-                  <input 
-                    type="text" 
-                    placeholder="João Silva"
-                    className="form-input personal-input"
-                    onChange={onChangeName}
-                  />
-                </div>
-                <div className="field-group">
-                  <label className="field-label">Email</label>
-                  <input 
-                    type="email" 
-                    placeholder="joao.silva@email.com"
-                    className="form-input personal-input"
-                  />
-                </div>
-                <div className="field-group">
-                  <label className="field-label">Telefone</label>
-                  <input 
-                    type="tel" 
-                    placeholder="(11) 99999-9999"
-                    className="form-input personal-input"
-                  />
-                </div>
-              </div>
-              
-              <button className="submit-btn personal-submit">
-                Salvar Informações Pessoais
-              </button>
-            </div>
+import { useState } from 'react';
+import PersonalInfo from './PersonalInfo'
 
+export default function Form() {
+  
+  return (
+        <div className="form-section">
+          <PersonalInfo />
             {/* Education Section */}
             <div className="card education-card">
               <div className="card-header">

@@ -4,12 +4,6 @@ import Form from './Components/Form';
 import Preview from './Components/Preview';
 
 function App() {
-  const [statusPersonalInfo, setStatusPersonalInfo] = useState('editing');
-  const [personalInfo, setPersonalInfo] = useState(null);
-
-  function handleNameInput(e) {
-    setPersonalInfo({ ...personalInfo, name: e.target.value });
-  }
 
   return (
     <div className="app">
@@ -21,11 +15,7 @@ function App() {
         </div>
 
         <div className="main-content">
-          {/* Left Column - Form */}
-          <Form onChangeName={handleNameInput} />
-          
-          {/* Right Column - Preview */}
-          {/* <Preview personalInfo={personalInfo} /> */}
+          <Form />
         </div>
       </div>
     </div>
